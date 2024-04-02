@@ -28,7 +28,14 @@
                     <th scope="row">{{ $comuna->comu_codi }}</th>
                     <td>{{ $comuna->comu_nomb }}</td>
                     <td>{{ $comuna->muni_nomb }}</td>
-                    <td>Actions</td>
+                    <td>
+                    <form action="{{route('comunas.destroy' , ['comuna' => $comuna->comu_codi])}}"
+                    method="POST" style="display: inline-block">
+                    @method('delete')
+                    @csrf
+                    <input type="submit" value="Delete" class="btn btn-danger">
+                    </form>
+                    </td>
                 </tr>
              @endforeach
             </tbody>

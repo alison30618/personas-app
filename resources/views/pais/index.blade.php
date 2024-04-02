@@ -12,6 +12,7 @@
   <body>
     <div class="container">
       <h1>Listado de Paises</h1>
+      <a href="{{route('pais.create')}}" class="btn btn-success">Add</a>
         <table class="table">
             <thead>
                 <tr>
@@ -28,6 +29,7 @@
                 <td>{{$pais->pais_nomb}}</td>
                 <td>{{$pais->muni_nomb}}</td>
                 <td>
+
                 <form action="{{ route('pais.destroy', ['pais' => $pais->pais_codi]) }}"
                 method='POST' style="display: inline-block">
                 @method('delete')

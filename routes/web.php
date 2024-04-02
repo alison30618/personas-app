@@ -17,9 +17,6 @@ use App\Http\Controllers\MunicipioController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('/comunas', [ComunaController:: class, 'index'])->name('comunas.index');
 Route::post('/comunas', [ComunaController::class, 'store'])->name('comunas.store');
@@ -30,3 +27,4 @@ Route::get('/comunas/{comuna}/edit', [ComunaController::class , 'edit'])->name('
 Route::get('/municipios', [MunicipioController:: class, 'index'])->name('municipios.index');
 
 
+  
